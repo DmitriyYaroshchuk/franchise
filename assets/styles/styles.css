@@ -90,7 +90,6 @@ main {
 
 /* About Section */
 .about__main {
-    margin: 0 -16px;
     padding: 32px 16px 40px;
     background: var(--primary);
     border-radius: 16px;
