@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franchise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+<!-- Language Switcher -->
+<div class="language-switcher">
+    <button class="lang-btn active" data-lang="uk">УКР</button>
+    <button class="lang-btn" data-lang="en">ENG</button>
+</div>
+
+<main class="about">
+    <div class="container">
+        <div class="about__main">
+            <h1 class="about__title title-1" data-i18n="franchise.title">Франшиза</h1>
+            <div class="about-top">
+                <img class="about-top__atom" src="assets/img/about_atom.svg" alt="">
+                <div class="about-top__descr about-top__descr_1">
+                    <p data-i18n="franchise.top.descr_1.p1">Опис франшизи 1</p>
+                    <p data-i18n="franchise.top.descr_1.p2">Опис франшизи 2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Review Form Section -->
+        <section class="contacts-review">
+            <div class="contacts-review__descr">
+                <h2 class="contacts-review__title title-1" data-i18n="franchise.review.title">Зв'яжіться з нами</h2>
+            </div>
+            <div class="contacts-review__form">
+                <form class="form" id="reviewForm" novalidate>
+                    <div class="form__row">
+                        <!-- Name Field -->
+                        <div class="field" data-field="name">
+                            <div class="textfield textfield_input">
+                                <label class="textfield__control">
+                                    <input
+                                            type="text"
+                                            name="name"
+                                            class="textfield__input"
+                                    >
+                                    <span class="textfield__label" data-i18n="form.firstName">Ім'я</span>
+                                </label>
+                                <span class="textfield__message"></span>
+                            </div>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="field" data-field="email">
+                            <div class="textfield textfield_input">
+                                <label class="textfield__control">
+                                    <input
+                                            type="email"
+                                            name="email"
+                                            class="textfield__input"
+                                    >
+                                    <span class="textfield__label" data-i18n="form.email">Email</span>
+                                </label>
+                                <span class="textfield__message"></span>
+                            </div>
+                        </div>
+
+                        <!-- Phone Field -->
+                        <div class="field" data-field="phone">
+                            <div class="textfield textfield_input">
+                                <label class="textfield__control">
+                                    <input
+                                            type="tel"
+                                            name="phone"
+                                            class="textfield__input"
+                                    >
+                                    <span class="textfield__label" data-i18n="form.phone">Телефон</span>
+                                </label>
+                                <span class="textfield__message"></span>
+                            </div>
+                        </div>
+
+                        <!-- Location Field -->
+                        <div class="field" data-field="location">
+                            <div class="textfield textfield_input">
+                                <label class="textfield__control">
+                                    <input
+                                            type="text"
+                                            name="location"
+                                            class="textfield__input"
+                                    >
+                                    <span class="textfield__label" data-i18n="form.location">Країна та місто</span>
+                                </label>
+                                <span class="textfield__message"></span>
+                            </div>
+                        </div>
+
+                        <!-- Budget Radio Buttons -->
+                        <div class="field" data-field="budget">
+                            <label class="field__label" data-i18n="form.budget">Бюджет</label>
+                            <div class="field__radios">
+                                <label class="radio">
+                                    <input type="radio" name="budget" value="up_to_100k">
+                                    <span class="radio__label" data-i18n="franchise.budgetOptions.upTo100k">До $100,000</span>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="budget" value="100k_200k">
+                                    <span class="radio__label" data-i18n="franchise.budgetOptions.range100k200k">$100,000 - $200,000</span>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="budget" value="200k_plus">
+                                    <span class="radio__label" data-i18n="franchise.budgetOptions.over200k">Понад $200,000</span>
+                                </label>
+                            </div>
+                            <p class="field__message"></p>
+                        </div>
+
+                        <!-- Message Textarea -->
+                        <div class="field" data-field="message">
+                            <div class="textfield textfield_input">
+                                <label class="textfield__control">
+                                        <textarea
+                                                name="message"
+                                                class="textfield__input textfield__textarea"
+                                                rows="5"
+                                        ></textarea>
+                                    <span class="textfield__label" data-i18n="form.message">Повідомлення</span>
+                                </label>
+                                <span class="textfield__message"></span>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="field">
+                            <button type="submit" class="btn btn-primary btn-expanded">
+                                <span class="btn__text" data-i18n="franchise.send">Надіслати</span>
+                                <span class="btn__loader" style="display: none;">
+                                        <span class="spinner"></span>
+                                    </span>
+                            </button>
+                        </div>
+
+                        <!-- Policy Text -->
+<!--                        <div class="field">-->
+<!--                            <p class="form__policy" data-i18n="franchise.policy">Натискаючи кнопку, ви погоджуєтесь з політикою конфіденційності</p>-->
+<!--                        </div>-->
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Socials Section -->
+        <section class="contacts-socials">
+            <h2 class="contacts-socials__title title-1" data-i18n="contacts.socials.title">Слідкуйте за нами</h2>
+            <ul class="socials socials_contacts" id="socialsList">
+                <!-- Social links will be generated by JavaScript -->
+            </ul>
+        </section>
+    </div>
+</main>
+
+<script type="module" src="./assets/js/script.js"></script>
+</body>
+</html>
