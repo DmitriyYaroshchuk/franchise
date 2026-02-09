@@ -25,8 +25,13 @@ export function validateForm(data) {
         errors.phone = getTranslation('errors.required', lang);
     }
 
+    // Message length validation (optional field, but if filled must be <= 255)
+    if (data.message && data.message.length > 255) {
+        errors.message = getTranslation('errors.messageTooLong', lang);
+    }
+
     // Optional fields - no validation needed
-    // name, location, budget, message are all optional
+    // name, location, budget are optional
 
     return errors;
 }

@@ -103,7 +103,8 @@
                             <div class="field__radios">
                                 <label class="radio">
                                     <input type="radio" name="budget" value="up_to_100k">
-                                    <span class="radio__label" data-i18n="franchise.budgetOptions.upTo100k">До $100,000</span>
+                                    <span class="radio__label"
+                                          data-i18n="franchise.budgetOptions.upTo100k">До $100,000</span>
                                 </label>
                                 <label class="radio">
                                     <input type="radio" name="budget" value="100k_200k">
@@ -121,14 +122,20 @@
                         <div class="field" data-field="message">
                             <div class="textfield textfield_input">
                                 <label class="textfield__control">
-                                        <textarea
-                                                name="message"
-                                                class="textfield__input textfield__textarea"
-                                                rows="5"
-                                        ></textarea>
+            <textarea
+                    name="message"
+                    class="textfield__input textfield__textarea"
+                    rows="5"
+                    maxlength="255"
+            ></textarea>
                                     <span class="textfield__label" data-i18n="form.message">Повідомлення</span>
                                 </label>
-                                <span class="textfield__message"></span>
+                                <div class="textfield__footer">
+                                    <span class="textfield__message"></span>
+                                    <span class="textfield__counter">
+                <span class="textfield__counter-current">0</span>/<span class="textfield__counter-max">255</span>
+            </span>
+                                </div>
                             </div>
                         </div>
 
@@ -143,9 +150,9 @@
                         </div>
 
                         <!-- Policy Text -->
-<!--                        <div class="field">-->
-<!--                            <p class="form__policy" data-i18n="franchise.policy">Натискаючи кнопку, ви погоджуєтесь з політикою конфіденційності</p>-->
-<!--                        </div>-->
+                        <!--                        <div class="field">-->
+                        <!--                            <p class="form__policy" data-i18n="franchise.policy">Натискаючи кнопку, ви погоджуєтесь з політикою конфіденційності</p>-->
+                        <!--                        </div>-->
                     </div>
                 </form>
             </div>

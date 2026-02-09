@@ -22,7 +22,8 @@ export const translations = {
         'contacts.socials.title': 'Слідкуйте за нами в соціальних мережах',
         'errors.required': 'Це поле обов\'язкове',
         'errors.email': 'Введіть коректну email адресу',
-        'errors.phone': 'Введіть коректний номер телефону'
+        'errors.phone': 'Введіть коректний номер телефону',
+        'errors.messageTooLong': 'Повідомлення не може бути довшим за 255 символів'
     },
     en: {
         'franchise.title': 'We are opening Foundation Coffee Place for Europe',
@@ -47,7 +48,8 @@ export const translations = {
         'contacts.socials.title': 'Follow us on social media',
         'errors.required': 'This field is required',
         'errors.email': 'Please enter a valid email address',
-        'errors.phone': 'Please enter a valid phone number'
+        'errors.phone': 'Please enter a valid phone number',
+        'errors.messageTooLong': 'Message cannot be longer than 255 characters'
     }
 };
 

@@ -18,6 +18,11 @@ export function initTextFields() {
             applyPhoneMask(input);
         }
 
+        // Setup character counter for textarea
+        if (input.tagName === 'TEXTAREA' && input.hasAttribute('maxlength')) {
+            setupCharacterCounter(field, input);
+        }
+
         // Setup event handlers
         setupFieldHandlers(field, input);
 
@@ -33,6 +38,40 @@ export function initTextFields() {
             }
         }, 100);
     });
+}
+
+
+/**
+ * Setup character counter for textarea
+ * @param {HTMLElement} field - Field container element
+ * @param {HTMLTextAreaElement} textarea - Textarea element
+ */
+function setupCharacterCounter(field, textarea) {
+    const counterCurrent = field.querySelector('.textfield__counter-current');
+    const counter = field.querySelector('.textfield__counter');
+    const maxLength = parseInt(textarea.getAttribute('maxlength'));
+
+    if (!counterCurrent || !counter) return;
+
+    const updateCounter = () => {
+        const length = textarea.value.length;
+        counterCurrent.textContent = length;
+
+        // Add warning/danger classes based on percentage
+        counter.classList.remove('textfield__counter_warning', 'textfield__counter_danger');
+
+        if (length >= maxLength) {
+            counter.classList.add('textfield__counter_danger');
+        } else if (length >= maxLength * 0.9) {
+            counter.classList.add('textfield__counter_warning');
+        }
+    };
+
+    // Update on input
+    textarea.addEventListener('input', updateCounter);
+
+    // Initial update
+    updateCounter();
 }
 
 /**
